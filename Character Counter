@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	c = prompt("Enter a string");
+	d = prompt("Letter to be counted");
+	
+	function countChar(n,chartoBeCounted)
+	{
+	let counter = 0;
+	let NumOfBs = 0;
+	do{
+	if (n[counter] == chartoBeCounted){
+	NumOfBs += 1;
+	 }
+		
+	counter += 1;
+	}
+	while(n[counter] != undefined);
+	
+	return NumOfBs;
+	}
+	
+	function countBs(n){
+		return countChar(n,"B");
+	}
+	
+	
+	document.write("There are " + countChar(c,d) + " " + d + " in the string.");
+	
+	document.write("<br /> There are " + countBs(c) + "B s in the string"); 
+	
+	
+	</script>
+</body>
+</html>
