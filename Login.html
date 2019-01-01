@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+		 
+	<title>form</title>
+	
+</head>
+	<body>
+		<form action="/register" id="registration" method="get">
+		<input name="email" placeholder="Email" type="text"/>
+		<input name="password" placeholder="Password" type="password"/>
+		<input name="confirmation" placeholder="Password (again)" type="Password"/>
+		<input name="agreement" type="checkbox"/> i agree
+		<input type="submit" value"Register"/>
+		</form>
+		
+		<script>			
+			var form = document.getElementById('registration');
+			form.onsubmit = function() {
+				if (form.email.value ==  '')
+				{
+				alert('missing email');
+				return false;
+				}else if (form.password.value == '')
+				{
+				alert('missing Password');
+				return false;
+				}else if (form.password.value != form.confirmation.value){
+				alert('Passwords dont match');
+				return false;
+				}else if(!form.agreement.checked)
+				{
+				alert('checkbox unchecked')
+			    return false;
+				}
+				return true;
+			
+			};
+		</script>
+	</body>
+</html>
