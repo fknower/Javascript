@@ -1,0 +1,35 @@
+<head>
+    <meta charset="utf-8" />
+    <title>BMI COMPARE</title>
+</head>
+<body>
+    <h1><font color="RED">BMI Compare</font></h1><br/>
+    <form action="details" id="details" method="get">
+        <input name="Person1" placeholder="Name" type="text"/>
+        <input name="height1" placeholder="Height" type="text"/>
+        <input name="weight1" placeholder="Weight" type="text"/><br/><br/>
+        <input name="Person2" placeholder="Name" type="text"/>
+        <input name="height2" placeholder="Height" type="text"/>
+        <input name="weight2" placeholder="Weight" type="text"/><br/><br/>
+        <input type="submit" value"Submit"/>
+    </form>
+    <script>
+        // When the Submit button is pressed it calculates the BMI of 2 people and outputs who has the highest.
+        var form = document.getElementById('details'); 
+        var bmi1;
+        var bmi2;
+        form.onsubmit = function () {
+            bmi1 = form.weight1.value / (form.height1.value * form.height1.value);
+            bmi2 = form.weight2.value / (form.height2.value * form.height2.value);
+            bmi1higher = bmi1 > bmi2;
+            if (bmi1higher = "undefined") {
+                alert('BMI,s are the are the same');
+            }else if(bmi1higher) {
+                alert(form.Person1.value + 's BMI is higher ');
+            } else {
+                alert(form.Person2.value + 's BMI is higher');
+            }
+        };
+    </script>
+</body>
+</html> 
