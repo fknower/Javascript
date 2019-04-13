@@ -1,0 +1,7 @@
+// The foreach method calls a function
+// item works the same as .this
+// syntax below
+
+Array.foreach(function (item){
+})
+
