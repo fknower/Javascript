@@ -1,0 +1,25 @@
+//define a class using 
+
+class ClassNeme {
+
+//Class Must Have Constructor
+
+    constructor(Input1,Input2, Input3) {
+//Internal variable definations must have a this. keyword    
+        this.Variable1 = Input1;
+        this.Variable2 = Input2;
+        this.Variable3 = Input3;       
+        }
+// below is a method defination
+
+    TestFunc(){
+        return (this.numberOfTrees / this.parkArea);
+    }
+}
+
+// Creats a new class
+Var Test = new ClassName(1,2,3);
+
+// To access example
+
+console.log(Test.TestFunc();
