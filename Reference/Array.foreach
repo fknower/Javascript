@@ -1,7 +1,8 @@
 // The foreach method calls a function
 // item works the same as .this
 // syntax below
+// the command is forEach; not foreach.
 
-Array.foreach(function (item){
+Array.forEach(function (item){
 })
 
