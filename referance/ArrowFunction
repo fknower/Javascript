@@ -15,7 +15,6 @@ const square = (x) => {
 
 const square = (x) => x * x
 
-
 // A note on "this" binding.- Arrow functions bind "this" on the function it was created in as below example. Look at the foreach bit.
 
 const event = {
@@ -32,3 +31,6 @@ const event = {
 }
 
 event.printGuestList()
+
+
+
