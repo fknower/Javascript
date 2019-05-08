@@ -1,0 +1,10 @@
+//example of element removal using the array filter function.
+
+ArrayVariable = ['Item1','Item2','Item3','Item4']
+
+const NewArray = ArrayVariable.filter(function (AnyVariable) {
+        if(AnyVariable !== 'Item3'){
+            return AnyVariable
+            }
+}
+
