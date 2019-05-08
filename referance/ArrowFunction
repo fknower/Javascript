@@ -11,6 +11,6 @@ const square = (x) => {
 }
 
 
-// Can be shortened even further 
+// Can be shortened even further as it has only 1 line
 
 const square = (x) => x * x
