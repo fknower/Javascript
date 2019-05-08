@@ -8,3 +8,10 @@ const NewArray = ArrayVariable.filter(function (AnyVariable) {
             }
 }
 
+
+
+// does the same as above but more efficient as only 1 line of code.
+
+const NewArray = ArrayVariable.filter(function (AnyVariable) {
+        return AnyVariable !== 'Item3'           
+}
