@@ -14,3 +14,21 @@ const square = (x) => {
 // Can be shortened even further as it has only 1 line
 
 const square = (x) => x * x
+
+
+// A note on "this" binding.- Arrow functions bind "this" on the function it was created in as below example. Look at the foreach bit.
+
+const event = {
+    name: 'Birthday Pary',
+    guestList:  ['Andrew','Jen','Mike'],
+    printGuestList() {
+        console.log('Guest list for ' + this.name)
+
+        this.guestList.forEach((AnyVariable)=>{
+            console.log(AnyVariable + ' is attending ' + this.name)
+        })
+    }
+   
+}
+
+event.printGuestList()
