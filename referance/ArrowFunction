@@ -9,3 +9,8 @@ const square = function(x){
 const square = (x) => {
     return x * x
 }
+
+
+// Can be shortened even further 
+
+const square = (x) => x * x
