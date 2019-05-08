@@ -1,0 +1,11 @@
+// normal function
+
+const square = function(x){
+    return x * x
+}
+
+// same function as arrow function
+
+const square = (x) => {
+    return x * x
+}
