@@ -20,6 +20,8 @@ const addNote = (title,body)=>{
 
 }
 
+
+// another example 
 const readNotes = (title)=>{
     const notes = loadNotes()
     const note = notes.find((note) => note.title == title)
