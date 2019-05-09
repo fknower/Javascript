@@ -15,3 +15,27 @@ const NewArray = ArrayVariable.filter(function (AnyVariable) {
 const NewArray = ArrayVariable.filter(function (AnyVariable) {
         return AnyVariable !== 'Item3'           
 }
+
+//another example array.filter this time search for an array of objects
+
+const tasks = {
+    tasks: [{
+        text: 'Grocery shopping',
+        completed: true
+    },{
+        text: 'Clean yard',
+        completed: false
+    }, {
+        text: 'Film course',
+        completed: false
+    }],
+
+    getTasksToDo : function (){
+       return this.tasks.filter(function(x){
+           return x.completed == false
+       })
+    }
+}
+    
+
+console.log(tasks.getTasksToDo())
