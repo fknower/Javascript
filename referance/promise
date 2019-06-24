@@ -1,0 +1,33 @@
+// promise pattern using async await
+// 1. create function that returns a promise
+// Note in the pattern reject should normally come first
+
+const add = (a,b) =>{
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+
+            if(a < 0 || b < 0) {
+                return reject('Numbers must be non-negative')
+            }
+
+            resolve(a + b)
+        },2000)
+    })
+}
+
+//2. use promise using async and assign to variable
+
+const doWork = async () => {
+   const sum = await add(1, 99)
+   const sum2 = await add(sum,50)
+   const sum3 = await add(sum2,-3)
+   return {sum3,sum2,sum}
+}
+
+//3. do something with result or error
+doWork().then((result)=>{
+        console.log('result ', result)
+    }).catch((e)=>{
+        console.log('error :', e)
+    })
+
