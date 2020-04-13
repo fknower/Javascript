@@ -1,0 +1,36 @@
+// the spread operator
+//the spread operator concatinates an array 
+//it looks the same as the rest operator
+
+
+var ary1 = [4,5,6]
+var ary2 = [1,2,3,...ary1]
+
+console.log(ary2)
+
+//result 1,2,3,4,5,6
+
+
+
+// another use case is to copy an array
+
+var ary1 = [4,5,6]
+var ary2 = [...ary1]
+
+console.log(ary2)
+
+//result 4,5,6
+
+
+
+// below shows a both rest and spread being used can be confusing
+var meth = "twitter"
+var opts = ["key","callbackurl"]
+
+function login (method,...options){   // <--- rest operator
+console.log(method)
+console.log(options)
+}
+
+login(meth,...opts)          // <--- Spread operator
+
