@@ -1,0 +1,37 @@
+Template strings or back ticks ` `
+
+\\ use case 1 - will embed new lines and quotes
+
+var msg = 
+`hello
+world
+my
+name 
+is 
+ "franco"`
+ 
+ \\ use case 2 - can embed variables
+ 
+ var place = "world"
+ var name = "Franco"
+ 
+ var msg = 
+ `hello
+ ${place}
+ my 
+ name 
+ is
+ ${name} `
+ 
+ \\ use case 3 -  ${} can be used as an expression ie can add operators
+ var a = 3
+ var b = 3
+  var msg = 
+ `a is ${a}
+  b is ${b}
+  a + b is ${a+b}`
+  
+  
+  \\  example 2
+  var isBold = false
+  var msg = `Hello world my name is ${isBold ? "<b>Franco</b> : Franco"}`
