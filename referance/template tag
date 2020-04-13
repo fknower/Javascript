@@ -1,0 +1,23 @@
+\\ template tags are just a function
+
+function h1(string){
+return "<h1>" + string[0] + "</h1>"
+}
+
+console.log(h1`franco`)
+
+//  A more complex function below. 
+// how it works."Hello my name is" is stored in first array, the variables name and place are stored in the second array.
+
+
+function h1(strings,...values){
+var body = ""
+  for(var i = 0;i < strings.length;i++){
+   body += strings[i] + (values[i] ||"")
+  }
+  return '<h1>${body}</h1>
+}
+
+var name = "Franco"
+var place = "world"
+console.log(h1`hello ${place} My name is ${name}.`)
